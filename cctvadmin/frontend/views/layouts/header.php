@@ -1,4 +1,51 @@
-		<div class="navbar navbar-default" id="navbar" style="height:30px;">
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>控制台 - CCTV-后台管理系统</title>
+		<meta name="keywords" content="Bootstrap模版,Bootstrap模版下载,Bootstrap教程,Bootstrap中文" />
+		<meta name="description" content="站长素材提供Bootstrap模版,Bootstrap教程,Bootstrap中文翻译等相关Bootstrap插件下载" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- basic styles -->
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<!-- fonts -->
+
+		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" /> -->
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+<div class="navbar navbar-default" id="navbar">
 			<script type="text/javascript">
 				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
 			</script>
@@ -8,7 +55,7 @@
 					<a href="#" class="navbar-brand">
 						<small>
 							<i class="icon-leaf"></i>
-							ACE后台管理系统
+							CCTV-直播后台管理系统
 						</small>
 					</a><!-- /.brand -->
 				</div><!-- /.navbar-header -->
@@ -166,7 +213,7 @@
 
 								<li>
 									<a href="#">
-										<img src="assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+										<img src="assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar">
 										<span class="msg-body">
 											<span class="msg-title">
 												<span class="blue">Alex:</span>
@@ -183,7 +230,7 @@
 
 								<li>
 									<a href="#">
-										<img src="assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
+										<img src="assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar">
 										<span class="msg-body">
 											<span class="msg-title">
 												<span class="blue">Susan:</span>
@@ -200,7 +247,7 @@
 
 								<li>
 									<a href="#">
-										<img src="assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
+										<img src="assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar">
 										<span class="msg-body">
 											<span class="msg-title">
 												<span class="blue">Bob:</span>
@@ -226,7 +273,7 @@
 
 						<li class="light-blue">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />
+								<img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo">
 								<span class="user-info">
 									<small>欢迎光临,</small>
 									Jason
@@ -253,7 +300,7 @@
 								<li class="divider"></li>
 
 								<li>
-									<a href="#">
+									<a href="?r=login/login_out">
 										<i class="icon-off"></i>
 										退出
 									</a>
@@ -264,230 +311,3 @@
 				</div><!-- /.navbar-header -->
 			</div><!-- /.container -->
 		</div>
-
-
-
-		<div class="main-container" id="main-container">
-			<script type="text/javascript">
-				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
-			</script>
-
-			<div class="main-container-inner">
-				<a class="menu-toggler" id="menu-toggler" href="#">
-					<span class="menu-text"></span>
-				</a>
-
-				<div class="sidebar" id="sidebar">
-					<script type="text/javascript">
-						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
-					</script>
-
-					<div class="sidebar-shortcuts" id="sidebar-shortcuts">
-						<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
-							<button class="btn btn-success">
-								<i class="icon-signal"></i>
-							</button>
-
-							<button class="btn btn-info">
-								<i class="icon-pencil"></i>
-							</button>
-
-							<button class="btn btn-warning">
-								<i class="icon-group"></i>
-							</button>
-
-							<button class="btn btn-danger">
-								<i class="icon-cogs"></i>
-							</button>
-						</div>
-
-						<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
-							<span class="btn btn-success"></span>
-
-							<span class="btn btn-info"></span>
-
-							<span class="btn btn-warning"></span>
-
-							<span class="btn btn-danger"></span>
-						</div>
-					</div><!-- #sidebar-shortcuts -->
-
-					<ul class="nav nav-list">
-						<li class="active">
-							<a href="index.html">
-								<i class="icon-dashboard"></i>
-								<span class="menu-text"> 控制台 </span>
-							</a>
-						</li>
-
-						<li>
-							<a href="typography.html">
-								<i class="icon-text-width"></i>
-								<span class="menu-text"> 文字排版 </span>
-							</a>
-						</li>
-
-						<li>
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-desktop"></i>
-								<span class="menu-text"> 用户管理 </span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
-
-							<ul class="submenu">
-								<li>
-									<a href="?r=user/useradd">
-										<i class="icon-double-angle-right"></i>
-										用户添加
-									</a>
-								</li>
-
-								<li>
-									<a href="?r=user/userdesign">
-										<i class="icon-double-angle-right"></i>
-										用户列表
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<li>
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-desktop"></i>
-								<span class="menu-text"> 管理员管理 </span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
-
-							<ul class="submenu">
-								<li>
-									<a href="?r=admin/adminadd">
-										<i class="icon-double-angle-right"></i>
-										管理员添加
-									</a>
-								</li>
-
-								<li>
-									<a href="?r=admin/adminlist">
-										<i class="icon-double-angle-right"></i>
-										管理员列表
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<li>
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-desktop"></i>
-								<span class="menu-text"> 导航管理 </span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
-
-							<ul class="submenu">
-								<li>
-									<a href="?r=nav/navadd">
-										<i class="icon-double-angle-right"></i>
-										导航添加
-									</a>
-								</li>
-
-								<li>
-									<a href="?r=nav/navlist">
-										<i class="icon-double-angle-right"></i>
-										导航列表
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<li>
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-desktop"></i>
-								<span class="menu-text"> 爵位管理 </span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
-
-							<ul class="submenu">
-								<li>
-									<a href="?r=jue/jueadd">
-										<i class="icon-double-angle-right"></i>
-										爵位添加
-									</a>
-								</li>
-
-								<li>
-									<a href="?r=jue/juelist">
-										<i class="icon-double-angle-right"></i>
-										爵位列表
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<li>
-								<a href="#" class="dropdown-toggle">
-								<i class="icon-list"></i>
-								<span class="menu-text"> 公会管理 </span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
-
-							<ul class="submenu">
-								<li>
-									<a href="?r=gong/list">
-										<i class="icon-double-angle-right"></i>
-										公会列表
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<li>
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-edit"></i>
-								<span class="menu-text"> 视频管理 </span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
-
-							<ul class="submenu">
-								<li>
-									<a href="?r=video/list">
-										<i class="icon-double-angle-right"></i>
-										视频管理
-									</a>
-								</li>
-
-								<li>
-									<a href="?r=video/dropzone">
-										<i class="icon-double-angle-right"></i>
-										文件上传
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<li>
-							<a href="?r=photo/gallery">
-								<i class="icon-picture"></i>
-								<span class="menu-text"> 相册 </span>
-							</a>
-						</li>
-
-					</ul><!-- /.nav-list -->
-
-					<div class="sidebar-collapse" id="sidebar-collapse">
-						<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
-					</div>
-
-					<script type="text/javascript">
-						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
-					</script>
-				</div>
-
-
-
-		<?php echo $content; ?>
