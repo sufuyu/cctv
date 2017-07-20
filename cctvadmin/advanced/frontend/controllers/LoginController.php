@@ -35,4 +35,8 @@ class LoginController extends Controller{
     public function actionLogin(){
         return $this->render("login.html");
     }
+    //注册
+    public function actionRegister(){
+        return $this->render("login.html");
+    }
 }
