@@ -1,72 +1,9 @@
-<!--内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内【开始】-->
-<div class="col-sm-7" id="q">
+<center>
+    <h3 style="color:blue">Welcome To CCTV-LIVE</h3>
+    <video id="myVideo" width="720" height="340" controls autobuffer>
+            <source src="assets/images/gallery/text.mp4" type="video/mp4">
+    </video><br />
+    <img src="assets/images/gallery/1.jpg" alt="" width="400px" height="400px" />
+    <img src="assets/images/gallery/2.jpg" alt="" width="400px" height="400px" />
+</center>
 
-    <div class="form-group">
-        <label for="name">分类名称</label>
-        <input type="text" class="form-control" id="name" placeholder="请输入导航名称" v-model="cate_name">
-    </div>
-    <select class="form-control" v-model="p_id" id="sele">
-        <option value="">选择分类级别</option>;
-        <option value="0">顶级分类</option>;
-    </select>
-    <button type="button" class="btn btn-default" id="r" v-on:click="test">提交</button>
-
-</div>
-
-<!--ErrorErrorErrorErrorErrorErrorErrorErrorErrorErrorErrorErrorErrorError-->
-<!--这里引用js的时候，得注意顺序，先引用vue.js，再引用vue-resource.js-->
-<!--自己引入的js自己引入的js自己引入的js自己引入的js自己引入的js-->
-<script src="js/a.js"></script>
-<script src="js/vue.js"></script>
-<script src="js/vue-resource.js"></script>
-<script>
-    $(function(){
-        //Jquery页面加载调用分类列表的接口，便于展示
-        $(document).ready(function(){
-            var url='http://127.0.0.1/Index/July/team/frontend/web/index.php?' +
-                    'r=index/show_cate&callback=msg';
-            // alert(url)
-            var str=""
-            $.ajax({
-                type:'get',
-                url:url,
-                dataType:'jsonp',
-                jsonp:'callback',
-                //jsonpCallback:'msg',//此处的msg是方法名。可以随便定义,【这句代码可不写，如果不写会自动生成一个随机方法】
-                success:function(wa){  //此处的wa可以随便写，它只是一个形式
-                    //alert(wa.info)
-                    str+='<option value="">选择分类级别</option>';
-                    str+='<option value="0">顶级分类</option>';
-                    $.each(wa.info,function(k,v){
-                        str+='<option value="'+ v.cate_id+'">'+ v.cate_name+'</option>';
-                    })
-                    $("#sele").html(str)
-                }
-            })
-        })
-    })
-
-    //vue调用接口进行添加分类
-    new Vue({
-        el:"#q",
-        data:{
-            cate_name:'',
-            p_id:""
-        },
-        //下面这两句代码可要可不要
-//                        ready:function (){
-//                          this.test();
-//                        },
-        methods:{
-            test:function(){
-                this.$http.jsonp('http://127.0.0.1/Index/July/team/frontend/web/index.php?r=index/cate_add',{params:{p_id:this.p_id,cate_name:this.cate_name}},{jsonp:'callback'}).then(function(res){
-                    alert(res.data.msg);
-                    location.href="cate_list.html"
-                },function(res){
-                    alert(res.data.msg);
-                });
-            }
-        }
-    })
-</script>
-<!--内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内【结束】-->
