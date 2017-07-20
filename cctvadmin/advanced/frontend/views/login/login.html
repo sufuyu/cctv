@@ -279,7 +279,9 @@
         methods:{
             //登录
             login:function(){
-                this.$http.jsonp('http://127.0.0.1/Index/July/team/frontend/web/index.php?r=login/login',{params:{user_name:this.user_name,user_pwd:this.user_pwd}},{jsonp:'callback'}).then(function(res){
+                this.$http.jsonp('http://127.0.0.1/Index/July/zhibo/advanced/backend/web/index.php?r=login/login',
+                        {params:{user_name:this.user_name,user_pwd:this.user_pwd}},
+                        {jsonp:'callback'}).then(function(res){
                     if(res.data.code==200){
                         alert(res.data.info);
                         location.href="?r=index/index"
@@ -289,7 +291,7 @@
                     }
                 },function(res){
                     alert(res.data.info);
-                    location.href="login.html"
+                    location.href="?r=login/login"
                 });
             },
             //注册
@@ -298,18 +300,20 @@
                     alert("两次密码必须一样");
                     return false;
                 }
-                this.$http.jsonp('http://127.0.0.1/Index/July/team/frontend/web/index.php?r=login/register',{params:{user_name:this.r_user_name,user_pwd:this.r_user_pwd,user_pwd1:this.r_user_pwd1}},{jsonp:'callback'}).then(function(res){
+                this.$http.jsonp('http://127.0.0.1/Index/July/zhibo/advanced/backend/web/index.php?r=login/register',
+                        {params:{user_name:this.r_user_name,user_pwd:this.r_user_pwd,user_pwd1:this.r_user_pwd1}},{jsonp:'callback'}).then(function(res){
                     if(res.data.code==200){
                         alert(res.data.info);
-                        location.href="index.html"
+                        location.href="?r=index/index"
                     }else{
                         alert(res.data.info);
-                        // location.href="login.html"//登录失败，如果写这句代码，会又一次跳转页面，如果不写，则直接要停留在本页面
+                        location.href="?r=login/register"
                     }
                 },function(res){
                     //alert(res.data.info);
-                    location.href="login.html"
+                    location.href="?r=login/register"
                 });
+
             }
         }
     })
