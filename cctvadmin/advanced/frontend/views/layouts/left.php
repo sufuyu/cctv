@@ -143,7 +143,7 @@ use yii\helpers\Url;
 									</a>
 								</li>
 								<li>
-									<a href="?r=gift/gift_list">
+									<a href="?r=gift/show">
 										<i class="icon-double-angle-right"></i>
 										<i class="icon-eye-open"></i>
 										礼物列表
