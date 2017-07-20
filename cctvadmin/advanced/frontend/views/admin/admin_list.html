@@ -1,0 +1,71 @@
+<!--引入相应的js-->
+<script src="assets/js/vue.js"></script>
+<script src="assets/js/vue-resource.js"></script>
+<script src="assets/js/a.js"></script>
+<div class="col-sm-7" id="q">
+
+<table class="table">
+    <caption><h3 color="blue">管理员列表</h3></caption>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>类型</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr v-for="(v,index) in ar">
+        <td>{{v.admin_id}}</td>
+        <td>{{v.admin_name}}</td>
+        <td v-if="v.admin_type=1">超级</td>
+        <td v-else>普通</td>
+        <td :class="'text-center'"><button @click="del(index)"> Delete</button></td>
+        <td :class="'text-center'"><button @click="up(index)"> Update</button></td>
+
+    </tr>
+    </tbody>
+</table>
+
+
+
+</div>
+<script type="text/javascript">
+    new Vue({
+        el:'#q',
+        data:{
+            ar:[]
+        },
+
+        beforeMount:function(){
+            this.$http.jsonp("http://127.0.0.1/Index/July/zhibo/advanced/backend/web/index.php?r=admin/admin_list")
+                    .then(function(data){
+                        this.ar=data.data.info//想要遍历。需要在data里边定义一个空的数组，
+                       // alert(data.data.info)
+                    })
+        },
+        methods:{
+            del:function(index){ //括号里面的id就是删除按钮里边的v.admin_id,一会要将这个值赋给接口，用于调用
+                var id=this.ar[index]["admin_id"];
+                //alert(id)
+
+                this.$http.jsonp('http://127.0.0.1/Index/July/zhibo/advanced/backend/web/index.php?r=admin/del_admin',
+                {params:{admin_id:id}},{jsonp:'callback'}).then(function(res){
+                    this.ar.splice(index,1);
+                    /*
+                     * splice() 方法可删除从 index 处开始的零个或多个元素，并且用参数列表中声明的一个或多个值来替换那些被删除的元素。
+                     * */
+                    alert(res.data.msg);
+                },function(res){
+                    alert(res.data.msg);
+                });
+            },
+            up:function(index){
+                var id=this.ar[index]["admin_id"];
+                //alert(id)
+                location.href="?r=admin/admin_update&id="+id
+
+            }
+        }
+    })
+</script>

@@ -1,0 +1,104 @@
+<!--&lt;!&ndash;内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内【开始】&ndash;&gt;-->
+<!--<div class="col-sm-7" id="q">-->
+
+    <!--<div class="form-group">-->
+        <!--<label for="name">分类名称</label>-->
+        <!--<input type="text" class="form-control" id="name" placeholder="请输入导航名称" v-model="cate_name">-->
+    <!--</div>-->
+    <!--<select class="form-control" v-model="p_id" id="sele">-->
+        <!--<option value="">选择分类级别</option>;-->
+        <!--<option value="0">顶级分类</option>;-->
+    <!--</select>-->
+    <!--<button type="button" class="btn btn-default" id="r" v-on:click="test">提交</button>-->
+    <!--<input type="button" value="sa" class="ww"/>-->
+
+<!--</div>-->
+
+<!--&lt;!&ndash;ErrorErrorErrorErrorErrorErrorErrorErrorErrorErrorErrorErrorErrorError&ndash;&gt;-->
+<!--&lt;!&ndash;这里引用js的时候，得注意顺序，先引用vue.js，再引用vue-resource.js&ndash;&gt;-->
+<!--&lt;!&ndash;自己引入的js自己引入的js自己引入的js自己引入的js自己引入的js&ndash;&gt;-->
+<!--<script src="assets/js/vue.js"></script>-->
+<!--<script src="assets/js/vue-resource.js"></script>-->
+<!--<script src="assets/js/a.js"></script>-->
+<!--<script>-->
+<!--$(".ww").click(function(){-->
+    <!--alert(43)-->
+<!--})-->
+
+    <!--//vue调用接口进行添加分类-->
+    <!--new Vue({-->
+        <!--el:"#q",-->
+        <!--data:{-->
+            <!--cate_name:'',-->
+            <!--p_id:""-->
+        <!--},-->
+        <!--methods:{-->
+            <!--test:function(){-->
+                <!--alert(333)-->
+            <!--}-->
+        <!--}-->
+    <!--})-->
+<!--</script>-->
+<!--&lt;!&ndash;内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内【结束】&ndash;&gt;-->
+
+<!--这里引用js的时候，得注意顺序，先引用vue.js，再引用vue-resource.js-->
+<!--自己引入的js自己引入的js自己引入的js自己引入的js自己引入的js-->
+<!--引入相应的js-->
+<script src="assets/js/a.js"></script>
+<script src="assets/js/vue.js"></script>
+<script src="assets/js/vue-resource.js"></script>
+
+<!--内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内【开始】-->
+<center>
+    <div class="col-sm-7" id="q">
+            <h3><font color="green">管理人员添加</font></h3>
+        <div class="form-group">
+            <label for="name">管理员名称</label>
+            <input type="text" class="form-control" id="name" placeholder="请输入管理人员" v-model="admin_name" style="width:200px;">
+        </div>
+        <div class="form-group">
+            <label for="name">密码</label>
+            <input type="text" class="form-control" id="name" placeholder="请输入密码" v-model="admin_pwd" style="width:200px;">
+        </div>
+        <div class="form-group">
+
+
+            <select class="form-control" v-model="admin_type" style="width:200px">
+                <option value="">选择管理员等级</option>
+                <option value="1">超级</option>
+                <option value="0">普通</option>
+            </select>
+
+        </div>
+        <button type="button" class="btn btn-default" id="r" v-on:click="test">提交</button>
+    </div>
+</center>
+<script>
+    new Vue({
+        el:"#q",
+        data:{
+            admin_name:"",
+            admin_pwd:"",
+            admin_type:""
+        },
+        methods:{
+            test:function(){
+                this.$http.jsonp('http://127.0.0.1/Index/July/zhibo/advanced/backend/web/index.php?r=admin/admin_add',
+                        {params:{admin_name:this.admin_name,admin_pwd:this.admin_pwd,admin_type:this.admin_type}},
+                        {jsonp:'callback'}).then(function(res){
+                            //alert(res.data)
+                            if(res.data.code==200){
+                                alert(res.data.info);
+                                location.href='?r=admin/admin_list'
+                            }
+                        },function(res){
+                            alert(res.data.info);
+                            location.href="login.html"
+                        })
+            }
+        }
+    })
+
+</script>
+
+<!--内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内【结束】-->
