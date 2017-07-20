@@ -23,6 +23,22 @@ Route::post('demo/add',"DemoController@Add");
 Route::get('demo/up/{$id}',"DemoController@up",function($id){
 	return $id;
 });
+//首页展示
+Route::get('index/index','IndexController@index');
+//申请入住
+Route::get('index/apply','IndexController@apply');
+//意见反馈
+Route::get('index/feedback','IndexController@feedback');
+// --------------------------------------------------------------------
+//广场
+Route::get('square/index','SquareController@index');
+//榜单
+Route::get('ranking/index','RankingController@index');
+
+
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
