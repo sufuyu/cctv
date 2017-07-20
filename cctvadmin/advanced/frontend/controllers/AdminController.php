@@ -39,5 +39,4 @@ class AdminController extends Controller{
         //echo $id;
         return $this->render("admin_update.html",['id'=>$id]);
     }
-
 }

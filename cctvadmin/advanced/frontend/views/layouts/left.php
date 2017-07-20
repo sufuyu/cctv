@@ -65,17 +65,17 @@ use yii\helpers\Url;
 							<ul class="submenu" style="display: none;">
 
 								<li>
-									<a href="<?php echo Url::to(['user/admin']) ?>" class="dropdown-toggle">
+									<a href="?r=admin/admin_list" class="dropdown-toggle">
 										<i class="double-angle-right"></i>
 										<i class="icon-eye-open"></i>
-											管理员
+											管理员列表
 									</a>
 								</li>
 								<li>
-									<a href="<?php echo Url::to(['user/plain']) ?>" class="dropdown-toggle">
+									<a href="?r=admin/user_add" class="dropdown-toggle">
 										<i class="double-angle-right"></i>
 										<i class="icon-eye-open"></i>
-											普通用户
+											添加普通用户
 									</a>
 								</li>
 								<li>
@@ -105,11 +105,10 @@ use yii\helpers\Url;
 						<li>
 							<a href="#" class="dropdown-toggle">
 								<i class="icon-list"></i>
-								<span class="menu-text"> 栏目管理 </span>
+								<span class="menu-text"> 直播分类管理 </span>
 
 								<b class="arrow icon-angle-down"></b>
 							</a>
-
 							<ul class="submenu">
 								<li>
 									<a href="?r=cate/cate_add">
@@ -144,7 +143,7 @@ use yii\helpers\Url;
 									</a>
 								</li>
 								<li>
-									<a href="?r=gift/gift_list">
+									<a href="?r=gift/show">
 										<i class="icon-double-angle-right"></i>
 										<i class="icon-eye-open"></i>
 										礼物列表
