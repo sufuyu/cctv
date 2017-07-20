@@ -1,0 +1,93 @@
+
+
+						<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 文章修改 </label>
+
+										<div class="col-sm-9 col-md-offset-3">
+											<input type="text" id="form-field-1" v-model="uname" value="{{uname}}" placeholder="请输入名称" class="col-xs-10 col-sm-5" />
+										</div>
+									</div>
+
+									<div class="clearfix form-actions">
+										<div class="col-md-offset-3 col-md-9">
+											<button class="btn btn-info" @click="sub()" type="button">
+												<i class="icon-ok bigger-110"></i>
+												修改
+											</button>
+
+											&nbsp; &nbsp; &nbsp;
+											<button class="btn" type="reset">
+												<i class="icon-undo bigger-110"></i>
+												重置
+											</button>
+										</div>
+									</div>
+									</form>
+
+
+
+
+
+<script>
+
+function GetRequest() {
+    var url = location.search; //获取url中"?"符后的字串
+    var theRequest = new Object();
+    if (url.indexOf("?") != -1) {
+        var str = url.substr(1);
+        strs = str.split("&");
+        for (var i = 0; i < strs.length; i++) {
+            theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+        }
+    }
+    return theRequest;
+}
+$(document).ready(function () {
+    var Request = new Object();
+    Request = GetRequest();
+    var id= Request["id"];
+    new Vue({
+		    el:'#box',
+		    data:{
+		    	uname:'',
+		   		id:''
+		    },
+		    beforeMount:function(){
+	      	this.$http.jsonp("http://localhost/yii/advanced/frontend/web/?r=vue/upd&id="+id, {}, {
+		        headers: {
+		        },
+		        emulateJSON: true
+		      }).then(function(response){
+	        	this.uname = response.data.data.title
+		      },function(){
+		        alert('请重试')
+		      });
+		    },
+	        methods:{
+                sub:function(){
+                    this.$http.jsonp("http://localhost/yii/advanced/frontend/web/?r=vue/upd&id="+id+"&uname="+this.uname, {}, {
+			        headers: {
+			        },
+			        emulateJSON: true
+			      }).then(function(res){
+			      	if(res.data.code == 100)
+			      	{
+			      		alert(res.data.msg)
+					 	window.location.href="./list.html"
+			      	}else{
+			      		alert('失败')
+			      	}
+
+					},function(res){
+			         alert(res.data.msg)
+			        })
+                }
+            }
+
+	})
+});
+
+</script>
+</body>
+</html>

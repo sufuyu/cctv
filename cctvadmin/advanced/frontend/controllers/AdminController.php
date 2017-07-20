@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: Administrator
  * Date: 2017/7/18
- * Time: 20:30
+ * Time: 21:39
  */
 namespace frontend\controllers;
 
@@ -22,21 +22,22 @@ use frontend\models\ContactForm;
 /**
  * Site controller
  */
-class LoginController extends Controller{
- 	public $layout=false;
-    public $enableCsrfValidation=false;//禁用form表单提交【防止出现400的错误】
+class AdminController extends Controller{
 
-    //退出登录
-    public function actionLogin_out(){
-        return $this->render("login.html");
+    //管理员列表
+    public function actionAdmin_list(){
+
+        return $this->render("admin_list.html");
+    }
+    //添加管理员
+    public function actionUser_add(){
+        return $this->render("admin_add.html");
+    }
+    //修改管理员
+    public function actionAdmin_update(){
+        $id=$_GET['id'];
+        //echo $id;
+        return $this->render("admin_update.html",['id'=>$id]);
     }
 
-    //登录
-    public function actionLogin(){
-        return $this->render("login.html");
-    }
-    //注册
-    public function actionRegister(){
-        return $this->render("login.html");
-    }
 }
