@@ -1,0 +1,45 @@
+<?php  
+use yii\helpers\Html;  
+use yii\widgets\ActiveForm;  
+?>  
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>礼物添加</title>
+</head>
+<body>
+	<form action="?r=gift/upload" method="post" enctype="multipart/form-data">
+	<center>
+	<table>
+			<tr>
+				<td>礼物名称</td>
+				<td><input type="text" name="gift_name"></td>
+			</tr>
+            <tr>
+            	<td>礼物log</td>
+            	<td><input type="file" name="gift_log" /></td>
+            </tr>
+            <tr>
+            	<td>礼物价格</td>
+            	<td><input type="text" name="gift_price" /></td>
+            </tr>	
+		<tr>	
+			<td>礼物排序</td>
+        <td><input type="text" name="sort"></td>
+		</tr>
+		<tr>	
+			<td>是否显示到首页</td>
+            <td>
+            	<input type="radio" name="is_show" value="1">是
+            	<input type="radio" name="is_show" value="0">否
+            </td>
+		</tr>
+		<tr>	
+			<td><input type="submit" value="提交"></td>
+            <td><input type="reset" value="重置"></td>
+		</tr>
+	</table>
+	</center>
+</form>
+</body>
+</html>

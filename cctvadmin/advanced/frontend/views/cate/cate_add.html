@@ -1,0 +1,68 @@
+<!--内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内【开始】-->
+<div class="page-content  clearfix form-actions">
+    <div class="page-header">
+        <h1>
+            栏目管理
+            <small>
+                <i class="icon-double-angle-right"></i>
+                栏目添加
+            </small>
+        </h1>
+    </div><!-- /.page-header -->
+
+
+        <div class="col-xs-8">
+            <!-- PAGE CONTENT BEGINS -->
+
+            <form class="form-horizontal" action="?r=cate/cate_insert" method="post" enctype='multipart/form-data'>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 分类名称 </label>
+
+                    <div class="col-sm-9">
+                        <input type="text" id="contentText" name="cate_name" placeholder="名称" class="col-xs-10 col-sm-5">
+                    </div>
+                </div>
+
+                <div class="space-4"></div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 分类log </label>
+
+                    <div class="col-sm-9">
+                        <input type="file" id="contentText" name="cate_log" placeholder="log" class="col-xs-10 col-sm-5">
+                    </div>
+                </div>
+               
+                <div class="space-4"></div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 是否显示导航 </label>
+
+                    <div class="col-sm-9">
+                       是<input type="radio" name="is_show" value="1">
+                       否<input type="radio" name="is_show" value="0">
+                    </div>
+                </div>
+
+                <div>
+                    <div class="col-md-offset-3 col-md-9">
+                        <button class="btn btn-info" type="submit">
+                            <i class="icon-ok bigger-110"></i>
+                            Submit
+                        </button>
+
+                        &nbsp; &nbsp; &nbsp;
+                        <button class="btn" type="reset">
+                            <i class="icon-undo bigger-110"></i>
+                            Reset
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div><!-- /.col -->
+</div>
+
+<!--ErrorErrorErrorErrorErrorErrorErrorErrorErrorErrorErrorErrorErrorError-->
+<!--这里引用js的时候，得注意顺序，先引用vue.js，再引用vue-resource.js-->
+<!--自己引入的js自己引入的js自己引入的js自己引入的js自己引入的js-->
+

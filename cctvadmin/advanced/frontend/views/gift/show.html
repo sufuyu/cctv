@@ -1,0 +1,167 @@
+<div class="col-xs-10">
+	<h3 class="header smaller lighter blue">礼物管理</h3>
+	<div class="table-header">
+		Results for "Latest Registered Domains"
+	</div>
+
+	<div class="table-responsive">
+		<div id="sample-table-2_wrapper" class="dataTables_wrapper" role="grid">
+			<div class="row">
+				<div class="col-sm-6">
+					<div id="sample-table-2_length" class="dataTables_length">
+						<label>Display 
+							<select size="1" name="sample-table-2_length" aria-controls="sample-table-2">
+								<option value="10" selected="selected">10</option>
+								<option value="25">25</option>
+								<option value="50">50</option>
+								<option value="100">100</option>
+							<lect> 
+							records
+						</label>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<form action="?r=catearch" method="post">
+						<div class="dataTables_filter" id="sample-table-2_filter">
+							<label>
+	                            Search:
+	                        <input type="text" id="name" aria-controls="sample-table-2"></label>
+						</div>
+					</form>
+				</div>
+			</div>
+			<table id="sample-table-2" class="table table-striped table-bordered table-hover dataTable" aria-describedby="sample-table-2_info">
+			<thead>
+				<tr role="row">
+					<th class="center sorting_disabled" role="columnheader" rowspan="1" colspan="1" style="width: 56px;">
+						<label>
+							<input type="checkbox" class="ace" id="allChk" />
+							<span class="lbl"></span>
+						</label>
+					</th>
+					
+					<th class="sorting" role="columnheader" tabindex="0" aria-controls="sample-table-2" rowspan="1" colspan="1" aria-label="Domain: activate to sort column ascending" style="width: 164px;">礼物名称</th>
+					
+					<th class="sorting" role="columnheader" tabindex="0" aria-controls="sample-table-2" rowspan="1" colspan="1" aria-label="Price: activate to sort column ascending" style="width: 111px;">log</th>
+					<th class="sorting" role="columnheader" tabindex="0" aria-controls="sample-table-2" rowspan="1" colspan="1" aria-label="Price: activate to sort column ascending" style="width: 111px;">礼物价格</th>
+					<th class="sorting" role="columnheader" tabindex="0" aria-controls="sample-table-2" rowspan="1" colspan="1" aria-label="Price: activate to sort column ascending" style="width: 111px;">是否显示</th>
+					
+					<th class="hidden-480 sorting" role="columnheader" tabindex="0" aria-controls="sample-table-2" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 171px;">Status</th>
+				</tr>
+			</thead>
+
+			
+		<tbody role="alert" aria-live="polite" aria-relevant="all">
+		
+		<?php foreach ($gift as $key => $v) { ?>
+			<tr class="allTr" id="<?php echo $v['gift_id'];?>">
+				<td class="center sorting_1">
+					<label>
+						<input type="checkbox" class="ace" name="subChk" value="<?php echo $v['gift_id']; ?>">
+						<span class="lbl"></span>
+					</label>
+				</td>
+
+				<td id="<?php echo $v['gift_id']?>">
+				<span class="num" id="s<?php echo $v['gift_id']?>"><?php echo $v['gift_name']?></span>
+					<input type="text" style="display:none;" id="i<?php echo $v['gift_id']?>" value="<?php echo $v['gift_name'];?>">
+				</td>
+				<td class=" "><img src="<?php echo $v['gift_log']; ?>" height="50px;" width="50px;" /></td>
+				<td class="">
+					<?php echo $v['gift_price'] ?>
+				</td>
+				<td class=" ">
+				<?php if ($v['is_show']) { ?>
+					是
+				<?php }else{ ?>
+					否
+				<?php }; ?>
+				</td>
+				<td class=" ">
+						<a class="blue" href="#" id="cha">
+							<i class="icon-zoom-in bigger-130"></i>
+						</a>
+
+						<a class="green" href="#" id="upd">
+							<i class="icon-pencil bigger-130"></i>
+						</a>
+
+				<a class="red" href="javascript:void(0);" id="<?php echo $v['gift_id'] ?>" onclick="del(this)">
+							<i class="icon-trash bigger-130"></i>
+						</a>
+				</td>
+			</tr>
+		<?php }; ?>
+	</tbody>
+		</table>
+		<div class="row"><div class="col-sm-6"><div class="dataTables_info" id="sample-table-2_info">Showing 1 to 10 of 23 entries</div></div><div class="col-sm-6"><div class="dataTables_paginate paging_bootstrap"><ul class="pagination"><li class="prev disabled"><a href="#"><i class="icon-double-angle-left"></i></a><><li class="active"><a href="#">1</a><><li><a href="#">2</a><><li><a href="#">3</a><><li class="next"><a href="#"><i class="icon-double-angle-right"></i></a><></ul></div></div></div></div>
+	</div>
+</div>
+
+<script src="assets/js/jquery-1.8.3.min.js"></script>
+<script>
+	//即点即改 点击tr  span隐藏 input 显示
+	$(".allTr").children().click(function(){
+		id = $(this).attr("id");
+		$("#s"+id).css("display","none");
+		$("#i"+id).css("display","block");
+	});
+
+	//失去焦点 把文本框中的值在数据库中修改 span显示 input隐藏
+	$(":input").blur(function(){
+		var name = $("#i"+id).val();
+
+		$.ajax({
+			type:"post",
+			url:"?r=gift/updates",
+			data:{gift_id:id,gift_name:name},
+			success:function(msg){
+				if (msg == 'ok') {
+					$("#s"+id).css("display","block");
+					$("#i"+id).css("display","none");
+					$("#s"+id).html(name);
+				}else{
+					$("#s"+id).css("display","block");
+					$("#i"+id).css("display","none");
+				}
+			}
+		})
+	});
+</script>
+<script>
+$(document).ready(function() 
+{
+	// 全选
+	$("#allChk").click(function() {
+	$("input[name='subChk']").prop("checked",this.checked);
+	});
+	// 单选
+	var subChk = $("input[name='subChk']")
+	subChk.click(function() {
+		$("#allChk").prop("checked", subChk.length == subChk.filter(":checked").length ? true:false);
+	});
+
+})
+//无刷新删除  
+function del(obj)  
+{  
+var ids=obj.id;  
+ajax=new XMLHttpRequest();  
+ajax.onreadystatechange=function()  
+{  
+    if(ajax.readyState==4)  
+    {  
+        //alert(ajax.responseText);  
+        if(ajax.responseText==1)  
+        {  
+            obj.parentNode.parentNode.parentNode.removeChild(obj.parentNode.parentNode);  
+        }  
+        else{  
+            alert("删除失败");  
+        }  
+    }  
+}  
+ajax.open("get","index.php?r=gift/del&ids="+ids);  
+ajax.send(null);  
+}  
+</script>
