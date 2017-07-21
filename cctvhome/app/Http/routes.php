@@ -29,6 +29,10 @@ Route::get('index/index','IndexController@index');
 Route::get('index/apply','IndexController@apply');
 //意见反馈
 Route::get('index/feedback','IndexController@feedback');
+//商城
+Route::get('index/mall','IndexController@mall');
+//music直播间
+Route::get('index/music','IndexController@music');
 // --------------------------------------------------------------------
 //广场
 Route::get('square/index','SquareController@index');

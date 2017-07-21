@@ -2629,4 +2629,106 @@
 			<a href="javascript:void(0);" class="btn-prev">上一页</a>
 			<a href="javascript:void(0);" class="btn-next">下一页</a>
 		</div>
-	</div>						
+	</div>
+<script type="text/javascript"> var xiu_pv_stat_ut =
+	1500024754.7076 </script>
+	<div id="footer">
+		<div class="footmenu">
+			<ul>
+				<li><a href="" tppabs="http://cserver.iqiyi.com/index?e=25" target="_blank" rel="nofollow">在线客服</a></li>
+				<li>
+					<span class="split">|</span><a target="_blank" href="" tppabs="http://www.iqiyi.com/common/contactus.html" rel="nofollow">联系合作</a>
+				</li>
+				<li>
+					<span class="split">|</span><a target="_blank" href="" tppabs="http://v.pps.tv/topic_161444.html" rel="nofollow">原创推荐</a>
+				</li>
+				<li>
+					<span class="split">|</span><a target="_blank" href="" tppabs="http://zhaopin.iqiyi.com/" rel="nofollow">招聘信息</a>
+				</li>
+				<li>
+					<span class="split">|</span><a target="_blank" href="" tppabs="http://www.pps.tv/about/" rel="nofollow">关于我们</a>
+				</li>
+				<li>
+					<span class="split">|</span><a target="_blank" href="help.htm" tppabs="http://x.pps.tv/about/help" rel="nofollow">帮助中心</a>
+				</li>
+			</ul>
+		</div>
+		<div class="copyright">
+			<p>
+				<span class="inform">违法和不良信息举报电话：400-923-7171</span>
+				<span class="inform">举报邮箱：<a rel="nofollow" target="_blank" href="mailto:jubao365@qiyi.com" style="color:#666;">jubao365@qiyi.com</a></span>
+			</p>
+
+			<p>
+				<a target="_blank" href="" tppabs="http://www.pps.tv/pps_licence.html" target="_blank" rel="nofollow">信息网络传播视听许可证 0908288号</a>
+				<a target="_blank" href="" tppabs="http://www.pps.tv/pps_licence2.html" target="_blank" rel="nofollow">广播电视节目制作经营许可证 沪字第339号</a>
+				<a target="_blank" href="" tppabs="http://www.pps.tv/pps_licence3.html" target="_blank" rel="nofollow">网络文化经营许可证 沪网文[2012]0187-026号</a>
+				<a target="_blank" href="" tppabs="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow">增值电信业务经营许可证 沪B2-20060072</a>
+			</p>
+
+			<p>
+				<a data-paizhao-elem="btn" data-paizhao-type="net" href="javascript:void(0);" rel="nofollow" title="互联网出版许可证 新出网证（沪）字47号">互联网出版许可证 新出网证（沪）字47号</a>
+				<a data-paizhao-elem="btn" data-paizhao-type="yaopin" href="javascript:void(0);" rel="nofollow" title="(沪)-非经营性-2011-0052">互联网药品信息服务许可证 (沪)-非经营性-2011-0052</a>
+				<a data-paizhao-elem="btn" data-paizhao-type="baojian" href="javascript:void(0);" rel="nofollow" title="沪卫(中医)网复审[2013]第10018号">互联网医疗保健信息服务许可证 沪卫(中医)网复审[2013]第10018号</a>
+			</p>
+
+			<p>
+				<a target="_blank" href="" tppabs="http://net.china.com.cn/" rel="nofollow">中国互联网违法和不良信息举报中心</a>
+				<a target="_blank" href="" tppabs="http://www.shjbzx.cn/" rel="nofollow">上海市举报中心</a>
+				<a target="_blank" href="" tppabs="http://www.shdf.gov.cn/" rel="nofollow">“扫黄打非”办公室举报电话：12390</a>
+				<a target="_blank" href="" tppabs="http://www.cyberpolice.cn/" rel="nofollow">网络违法犯罪举报网站</a>
+				<a target="_blank" href="" tppabs="http://news.cctv.com/special/C20456/01/index.shtml" rel="nofollow">中国互联网视听节目服务自律公约</a>
+			</p>
+
+			<p>
+				Copyright © 2017 PPS All Rights Reserved
+			</p>
+		</div>
+	</div>
+	<div id="paizhao-wrap">
+		<div id="data-paizhao-content" class="xkPopbox">
+			<div class="dialog-close">
+				<a rel="nofollow" href="#" title="关闭">关闭</a>
+			</div>
+			<img data-type="net" alt="互联网出版许可证 新出网证（沪）字47号" src="xuke.jpg" tppabs="http://www.qiyipic.com/common/fix/site-pps/xuke.jpg" style="display: block; width: 700px; height: 495px;" data-private-display="block">
+			<img data-type="yaopin" alt="(沪)-非经营性-2011-0052" src="yaopinfuwu.jpg" tppabs="http://www.qiyipic.com/common/fix/site-pps/yaopinfuwu.jpg" style="display: none; width: 800px; height: 569px;" data-private-display="block">
+			<img data-type="baojian" alt="沪卫(中医)网复审[2013]第10018号" src="yiliaofuwu.jpg" tppabs="http://www.qiyipic.com/common/fix/site-pps/yiliaofuwu.jpg" style="display: none; width: 567px; height: 743px;" data-private-display="block">
+		</div>
+	</div>
+<script type="text/javascript" src="{{asset('common/js/jquery-1.7.2.min.js-v=1.0.0')}}" tppabs="{{asset('common/js/ppsshow/js-libs/jquery-1.7.2.min.js?v=1.0.0')}}"></script>
+
+
+	<script data-js-version="20170713184940" data-flash-version="20170713181027" type="text/javascript" charset="utf-8" src="{{asset('common/js/require-min.js-v=1.0.0')}}" tppabs="{{asset('common/js/ppsshow/js-libs/require-min.js?v=1.0.0')}}" data-main="http://static.iqiyi.com/js/ppsshow/common/header.js?v=20170713184940"></script>
+	<script>
+		var _hmt = _hmt || [];
+				require(['http://static.iqiyi.com/js/ppsshow/web_v2/index.js?v=20170713184940'], function () {
+						require(['comscore.js'/*tpa=http://static.iqiyi.com/js/ppsshow/tools/comscore.js*/], function (comscore) {
+				var hm = document.createElement("script");
+				hm.src = "hm.js-0f5556da646371aeac76715b71f140dd"/*tpa=http://hm.baidu.com/hm.js?0f5556da646371aeac76715b71f140dd*/;
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			});
+					});
+	</script>
+
+
+<noscript>
+	<img src="p2-c1=2&c2=7290408&cv=2.0&cj=1.gif" tppabs="http://b.scorecardresearch.com/p?c1=2&c2=7290408&cv=2.0&cj=1"/>
+</noscript>
+
+<!--Exec Time:0.0506 -->
+<script>
+	window.addEventListener||window.jQuery||window.Backbone||!window._qosPush||window._qosPush({msg:"静态资源加载失败"});
+		var _native_version = {
+			list: [] || [],
+			pic: [
+				// >= 某个版本
+				{
+					start: 0,
+					end: Infinity
+				}
+			]
+	}
+</script>
+</body>
+</html>
