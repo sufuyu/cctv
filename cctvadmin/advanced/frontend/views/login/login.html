@@ -284,7 +284,7 @@
                         {jsonp:'callback'}).then(function(res){
                     if(res.data.code==200){
                         alert(res.data.info);
-                        location.href="?r=index/index"
+                        location.href="?r=admin/admin_list"
                     }else{
                         alert(res.data.info);
                         // location.href="login.html"//登录失败，如果写这句代码，会又一次跳转页面，如果不写，则直接要停留在本页面

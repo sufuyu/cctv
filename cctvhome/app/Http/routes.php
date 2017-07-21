@@ -38,9 +38,11 @@ Route::get('index/music','IndexController@music');
 Route::get('square/index','SquareController@index');
 //榜单
 Route::get('ranking/index','RankingController@index');
-
-
-
+//------------------------------------------------------------------
+//登录
+Route::get('login/login','LoginController@login');
+//注册
+Route::get('login/register','LoginController@register');
 
 
 /*
@@ -56,4 +58,10 @@ Route::get('ranking/index','RankingController@index');
 
 Route::group(['middleware' => ['web']], function () {
     //
+});
+
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+
+    Route::get('/home', 'HomeController@index');
 });

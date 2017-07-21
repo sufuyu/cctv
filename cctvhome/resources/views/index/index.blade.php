@@ -56,8 +56,8 @@
 <div class="site-nav">
 		<div class="site-nav-master" data-pb-block="15041001">
 			<ul class="snm-l">
-				<li class="sn-item"><a href="" tppabs="http://www.iqiyi.com/" data-pb-rseat="18" target="_blank" class="sn"><b class="xicon-qiyi xicon"></b>爱奇艺首页</a></li>
-				<li class="sn-item"><a href="" tppabs="http://www.pps.tv/" data-pb-rseat="19" target="_blank" class="sn"><b class="xicon-pps xicon"></b>PPS首页</a></li>
+				<li class="sn-item"><a href="{{url('index/index')}}" tppabs="http://www.iqiyi.com/" data-pb-rseat="18" target="_blank" class="sn"><b class="xicon-qiyi xicon"></b>cctv首页</a></li>
+				<li class="sn-item"><a href="{{url('index/index')}}" tppabs="http://www.pps.tv/" data-pb-rseat="19" target="_blank" class="sn"><b class="xicon-pps xicon"></b>PPS首页</a></li>
 			</ul>
 			<ul class="snm-r">
 				<li class="download sn-item">
@@ -77,7 +77,7 @@
 						<div class="eyes-arrow"><b class="arrow-white"></b><b class="arrow-syb"></b></div>
 					</div>
 				</li>
-				<li class="sn-item"><a class="sn" target="_Blank" href="index-1.htm" tppabs="http://x.pps.tv/enter/">申请入驻</a></li>
+				<li class="sn-item"><a class="sn" target="_Blank" href="{{url('index/apply')}}" tppabs="http://x.pps.tv/enter/">申请入驻</a></li>
 			</ul>
 		</div>
 	</div>
@@ -87,19 +87,19 @@
 			<h1 class="logo" title="奇秀"><a href="index.htm" tppabs="http://x.pps.tv/" data-pb-rseat="1">cctv主播秀场</a></h1>
 			<ul class="nav">
 				<li>
-					<a href="index.htm" tppabs="http://x.pps.tv/" data-pb-rseat="2" class="nav-item nav-index"><span>首页</span></a>
+					<a href="{{url('index/index')}}" tppabs="http://x.pps.tv/" data-pb-rseat="2" class="nav-item nav-index"><span>首页</span></a>
 				</li>
 				<li>
-					<a href="s0-a0-f0-b1-p1.htm" tppabs="http://x.pps.tv/cate/center" data-pb-rseat="3" class="nav-item nav-category"><span>广场</span></a>
+					<a href="{{url('square/index')}}" tppabs="http://x.pps.tv/cate/center" data-pb-rseat="3" class="nav-item nav-category"><span>广场</span></a>
 				</li>
 				<li>
-					<a href="activity.htm" tppabs="http://x.pps.tv/activity" data-pb-rseat="22" class="nav-item nav-activitys"><span>活动</span></a>
+					<a href="{{url('index/index')}}" tppabs="http://x.pps.tv/activity" data-pb-rseat="22" class="nav-item nav-activitys"><span>活动</span></a>
 				</li>
 				<li>
-					<a href="rank.htm" tppabs="http://x.pps.tv/rank" data-pb-rseat="4" class="nav-item nav-ranks"><span>榜单</span></a>
+					<a href="{{url('ranking/index')}}" tppabs="http://x.pps.tv/rank" data-pb-rseat="4" class="nav-item nav-ranks"><span>榜单</span></a>
 				</li>
 				<li>
-					<a href="mall.htm" tppabs="http://x.pps.tv/mall" data-pb-rseat="5" class="nav-item nav-mall"><span>商城</span></a>
+					<a href="{{url('index/mall')}}" tppabs="http://x.pps.tv/mall" data-pb-rseat="5" class="nav-item nav-mall"><span>商城</span></a>
 				</li>
 				<li>
 					<a href="download.htm" tppabs="http://x.pps.tv/download" data-pb-rseat="21" class="nav-item nav-download"><span>APP下载</span></a>
