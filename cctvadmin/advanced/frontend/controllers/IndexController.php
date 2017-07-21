@@ -18,7 +18,7 @@ use frontend\models\ContactForm;
  */
 class IndexController extends Controller{
 
-// 	public $layout=false;
+	public $layout=false;
     public $enableCsrfValidation=false;//禁用form表单提交【防止出现400的错误】
 	//首页展示
 	public function actionIndex(){
