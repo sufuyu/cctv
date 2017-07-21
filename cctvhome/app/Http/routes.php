@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index/index');
 });
 Route::get('demo/index','DemoController@index');
 Route::get('demo/show',"DemoController@show");
@@ -41,6 +41,9 @@ Route::get('ranking/index','RankingController@index');
 //------------------------------------------------------------------
 //登录
 Route::get('login/login','LoginController@login');
+Route::get('login/postLogin','LoginController@postLogin');
+//邮箱验证
+Route::get('/send','LoginController@send');
 //注册
 Route::get('login/register','LoginController@register');
 
@@ -58,6 +61,12 @@ Route::get('login/register','LoginController@register');
 
 Route::group(['middleware' => ['web']], function () {
     //
+});
+
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+
+    Route::get('/home', 'HomeController@index');
 });
 
 Route::group(['middleware' => 'web'], function () {
