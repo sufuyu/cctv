@@ -83,44 +83,9 @@ _pre_setPageWidth(_pre_configList);
 		</div>
 	</div>
 <!-- 中部 -->
-<div class="site-header index-page" data-pb-block="15041001">
-		<div class="inner">
-			<h1 class="logo" title="奇秀"><a href="index.htm" tppabs="http://x.pps.tv/" data-pb-rseat="1">cctv主播秀场</a></h1>
-						<ul class="nav">
-				<li>
-					<a href="{{url('index/index')}}" tppabs="http://x.pps.tv/" data-pb-rseat="2" class="nav-item nav-index"><span>首页</span></a>
-				</li>
-				<li>
-					<a href="{{url('square/index')}}" tppabs="http://x.pps.tv/cate/center" data-pb-rseat="3" class="nav-item nav-category"><span>广场</span></a>
-				</li>
-				<li>
-					<a href="{{url('index/index')}}" tppabs="http://x.pps.tv/activity" data-pb-rseat="22" class="nav-item nav-activitys"><span>活动</span></a>
-				</li>
-				<li>
-					<a href="{{url('ranking/index')}}" tppabs="http://x.pps.tv/rank" data-pb-rseat="4" class="nav-item nav-ranks"><span>榜单</span></a>
-				</li>
-				<li>
-					<a href="{{url('index/mall')}}" tppabs="http://x.pps.tv/mall" data-pb-rseat="5" class="nav-item nav-mall"><span>商城</span></a>
-				</li>
-				<li>
-					<a href="download.htm" tppabs="http://x.pps.tv/download" data-pb-rseat="21" class="nav-item nav-download"><span>APP下载</span></a>
-				</li>
-			</ul>
-			<div class="search-input">
-				<form action="http://x.pps.tv/search/" target="_blank">
-					<input type="text" name="wd" placeholder="搜索昵称/房间号">
-					<input type="submit" style="display: none">
-					<a href="javascript:void(0);" class="btn btn-search" data-pb-rseat="6"><span class="ico ico-search"></span></a>
-				</form>
-			</div>
-			<div class="u-center" id="headerUserCenter">
-				<div class="nav-login">
-					<a href="javascript:void(0);" data-pb-rseat="14" node-type="loginLi" title="登录" class="login-enter">登录</a>
-					<a href="javascript:void(0);" data-pb-rseat="15" node-type="loginLi" title="注册" class="reg-enter">注册</a>
-				</div>
-			</div>
-		</div>
-	</div>
+@extends('layout')
+
+@section('content')
 	<!--module/focus/_focus.html begin-->
 <div class="hp-banner"><span class="br-img"></span></div>
 <div id="bd">
@@ -260,3 +225,4 @@ _pre_setPageWidth(_pre_configList);
 </script>
 </body>
 </html>
+@stop
