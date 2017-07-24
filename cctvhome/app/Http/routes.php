@@ -16,24 +16,40 @@ Route::get('/', function () {
 });
 
 //首页展示
-Route::get('index/index','IndexController@index');
+Route::any('index/index','IndexController@index');
+//点击图片跳转页面
+Route::any('index/img','IndexController@img');
 //申请入住
 Route::get('index/apply','IndexController@apply');
 //意见反馈
 Route::get('index/feedback','IndexController@feedback');
 //商城
 Route::get('index/mall','IndexController@mall');
+    //贵族
+    Route::any('mall/guizu','MallController@guizu');
+    //礼包
+    Route::any('mall/gift','MallController@gift');
 //music直播间
 Route::get('index/music','IndexController@music');
 // --------------------------------------------------------------------
 //广场
 Route::get('square/index','SquareController@index');
+    Route::any('square/search','SquareController@search');
+
 //榜单
 Route::get('ranking/index','RankingController@index');
+    Route::get('ranking/week','RankingController@week');
+    Route::get('ranking/rank','RankingController@rank');
 
-
-
-
+//-----------------------------------------------------------------
+//登录
+Route::get('login/login','LoginController@login');
+//执行登录
+Route::any('login/login_do','LoginController@login_do');
+//注册
+Route::get('login/register','LoginController@register');
+//执行注册
+Route::post('login/register_do','LoginController@register_do');//注意传值方式应该是any或者post
 
 /*
 |--------------------------------------------------------------------------

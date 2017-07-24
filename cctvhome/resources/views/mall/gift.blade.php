@@ -93,19 +93,19 @@
         <h1 class="logo" title="奇秀"><a href="/" data-pb-rseat="1">奇秀美女主播秀场</a></h1>
         <ul class="nav">
             <li>
-                <a href="/" data-pb-rseat="2" class="nav-item nav-index"><span>首页</span></a>
+                <a href="{{url('index/index')}}" data-pb-rseat="2" class="nav-item nav-index"><span>首页</span></a>
             </li>
             <li>
-                <a href="/cate/center" data-pb-rseat="3" class="nav-item nav-category"><span>广场</span></a>
+                <a href="{{url('square/index')}}" data-pb-rseat="3" class="nav-item nav-category"><span>广场</span></a>
             </li>
             <li>
-                <a href="/activity" data-pb-rseat="22" class="nav-item nav-activitys"><span>活动</span></a>
+                <a href="#" data-pb-rseat="22" class="nav-item nav-activitys"><span>活动</span></a>
             </li>
             <li>
-                <a href="/rank" data-pb-rseat="4" class="nav-item nav-ranks"><span>榜单</span></a>
+                <a href="{{url('ranking/index')}}" data-pb-rseat="4" class="nav-item nav-ranks"><span>榜单</span></a>
             </li>
             <li>
-                <a href="/mall" data-pb-rseat="5" class="nav-item nav-mall"><span>商城</span></a>
+                <a href="{{url('index/mall')}}" data-pb-rseat="5" class="nav-item nav-mall"><span>商城</span></a>
             </li>
             <li>
                 <a href="/download" data-pb-rseat="21" class="nav-item nav-download"><span>APP下载</span></a>
