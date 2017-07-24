@@ -54,10 +54,72 @@
 		}var _pre_configList = [ {max: 1180, cls: 'min-wide'}, {max: 1380, cls: ''}, {max: Infinity , cls: 'max-wide'}];/*非直播间*/
 _pre_setPageWidth(_pre_configList);
 </script>
-<!-- 引入文件 -->
-@extends('layout')
-
-@section('content')
+	<div class="site-nav">
+		<div class="site-nav-master" data-pb-block="15041001">
+			<ul class="snm-l">
+				<li class="sn-item"><a href="" tppabs="http://www.iqiyi.com/" data-pb-rseat="18" target="_blank" class="sn"><b class="xicon-qiyi xicon"></b>cctv首页</a></li>
+				<li class="sn-item"><a href="" tppabs="http://www.pps.tv/" data-pb-rseat="19" target="_blank" class="sn"><b class="xicon-pps xicon"></b>PPS首页</a></li>
+			</ul>
+			<ul class="snm-r">
+				<li class="download sn-item">
+					<a href="javascript:void(0);" class="sn">下载<b class="xicon xicon-chevron-vertical"></b></a>
+					<div class="eyes-tip site-nav-app-download" style="display: none;" data-clickbodyhide="1">
+						<ul class="app-download-list">
+							<li class="download-item dl-mobile">
+								<a href="" tppabs="http://store.iqiyi.com/web/iqiyi/detail/mobile.action" data-pb-rseat="16" target="_blank" class="dl">爱奇艺APP</a>
+							</li>
+							<li class="download-item dl-pc">
+								<a href="" tppabs="http://dl.static.iqiyi.com/IQIYIsetup.exe" data-pb-rseat="17" target="_blank" class="dl">爱奇艺客户端</a>
+							</li>
+							<li class="download-item dl-xiu">
+								<a href="" tppabs="http://mbdapp.iqiyi.com/j/ot/iQiyiCamera_Setup.exe" data-pb-rseat="20" class="dl">爱奇艺直播伴侣</a>
+							</li>
+						</ul>
+						<div class="eyes-arrow"><b class="arrow-white"></b><b class="arrow-syb"></b></div>
+					</div>
+				</li>
+				<li class="sn-item"><a class="sn" target="_Blank" href="index-1.htm" tppabs="http://x.pps.tv/enter/">申请入驻</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="site-header ranks-page" data-pb-block="15041001">
+		<div class="inner">
+			<h1 class="logo" title="奇秀"><a href="index.htm" tppabs="http://x.pps.tv/" data-pb-rseat="1">cctv主播秀场</a></h1>
+			<ul class="nav">
+				<li>
+					<a href="{{url('idnex/index')}}" tppabs="http://x.pps.tv/" data-pb-rseat="2" class="nav-item nav-index"><span>首页</span></a>
+				</li>
+				<li>
+					<a href="{{url('square/index')}}" tppabs="http://x.pps.tv/cate/center" data-pb-rseat="3" class="nav-item nav-category"><span>广场</span></a>
+				</li>
+				<li>
+					<a href="#" tppabs="http://x.pps.tv/activity" data-pb-rseat="22" class="nav-item nav-activitys"><span>活动</span></a>
+				</li>
+				<li>
+					<a href="{{url('ranking/index')}}" tppabs="http://x.pps.tv/rank" data-pb-rseat="4" class="nav-item nav-ranks"><span>榜单</span></a>
+				</li>
+				<li>
+					<a href="{{url('index/mall')}}" tppabs="http://x.pps.tv/mall" data-pb-rseat="5" class="nav-item nav-mall"><span>商城</span></a>
+				</li>
+				<li>
+					<a href="download.htm" tppabs="http://x.pps.tv/download" data-pb-rseat="21" class="nav-item nav-download"><span>APP下载</span></a>
+				</li>
+			</ul>
+			<div class="search-input">
+				<form action="http://x.pps.tv/search/" target="_blank">
+					<input type="text" name="wd" placeholder="搜索昵称/房间号">
+					<input type="submit" style="display: none">
+					<a href="javascript:void(0);" class="btn btn-search" data-pb-rseat="6"><span class="ico ico-search"></span></a>
+				</form>
+			</div>
+			<div class="u-center" id="headerUserCenter">
+				<div class="nav-login">
+					<a href="javascript:void(0);" data-pb-rseat="14" node-type="loginLi" title="登录" class="login-enter">登录</a>
+					<a href="javascript:void(0);" data-pb-rseat="15" node-type="loginLi" title="注册" class="reg-enter">注册</a>
+				</div>
+			</div>
+		</div>
+	</div>
 	
 	<div id="wrapper">
 		<div class="ranks-nav">
@@ -1117,4 +1179,4 @@ _pre_setPageWidth(_pre_configList);
 
 </body>
 </html>
-@stop
+
