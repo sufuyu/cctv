@@ -115,8 +115,8 @@ _pre_setPageWidth(_pre_configList);
 			</div>
 			<div class="u-center" id="headerUserCenter">
 				<div class="nav-login">
-					<a href="javascript:void(0);" data-pb-rseat="14" node-type="loginLi" title="登录" class="login-enter">登录</a>
-					<a href="javascript:void(0);" data-pb-rseat="15" node-type="loginLi" title="注册" class="reg-enter">注册</a>
+					<a href="{{url('login/login')}}" data-pb-rseat="14" node-type="loginLi" title="登录" class="login-enter">登录</a>
+					<a href="{{url('login/register')}}" data-pb-rseat="15" node-type="loginLi" title="注册" class="reg-enter">注册</a>
 				</div>
 			</div>
 		</div>
