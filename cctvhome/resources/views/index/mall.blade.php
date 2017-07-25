@@ -86,19 +86,19 @@ _pre_setPageWidth(_pre_configList);
 			<h1 class="logo" title="奇秀"><a href="index.htm" tppabs="http://x.pps.tv/" data-pb-rseat="1">cctv秀场</a></h1>
 			<ul class="nav">
 				<li>
-					<a href="index.htm" tppabs="http://x.pps.tv/" data-pb-rseat="2" class="nav-item nav-index"><span>首页</span></a>
+					<a href="{{url('index/index')}}" tppabs="http://x.pps.tv/" data-pb-rseat="2" class="nav-item nav-index"><span>首页</span></a>
 				</li>
 				<li>
-					<a href="s0-a0-f0-b1-p1.htm" tppabs="http://x.pps.tv/cate/center" data-pb-rseat="3" class="nav-item nav-category"><span>广场</span></a>
+					<a href="{{url('square/index')}}" tppabs="http://x.pps.tv/cate/center" data-pb-rseat="3" class="nav-item nav-category"><span>广场</span></a>
 				</li>
 				<li>
-					<a href="activity.htm" tppabs="http://x.pps.tv/activity" data-pb-rseat="22" class="nav-item nav-activitys"><span>活动</span></a>
+					<a href="#" tppabs="http://x.pps.tv/activity" data-pb-rseat="22" class="nav-item nav-activitys"><span>活动</span></a>
 				</li>
 				<li>
-					<a href="rank.htm" tppabs="http://x.pps.tv/rank" data-pb-rseat="4" class="nav-item nav-ranks"><span>榜单</span></a>
+					<a href="{{url('ranking/index')}}" tppabs="http://x.pps.tv/rank" data-pb-rseat="4" class="nav-item nav-ranks"><span>榜单</span></a>
 				</li>
 				<li>
-					<a href="mall.htm" tppabs="http://x.pps.tv/mall" data-pb-rseat="5" class="nav-item nav-mall"><span>商城</span></a>
+					<a href="{{url('index/mall')}}" tppabs="http://x.pps.tv/mall" data-pb-rseat="5" class="nav-item nav-mall"><span>商城</span></a>
 				</li>
 				<li>
 					<a href="download.htm" tppabs="http://x.pps.tv/download" data-pb-rseat="21" class="nav-item nav-download"><span>APP下载</span></a>
@@ -113,8 +113,8 @@ _pre_setPageWidth(_pre_configList);
 			</div>
 			<div class="u-center" id="headerUserCenter">
 				<div class="nav-login">
-					<a href="javascript:void(0);" data-pb-rseat="14" node-type="loginLi" title="登录" class="login-enter">登录</a>
-					<a href="javascript:void(0);" data-pb-rseat="15" node-type="loginLi" title="注册" class="reg-enter">注册</a>
+					<a href="{{url('login/login')}}" data-pb-rseat="14" node-type="loginLi" title="登录" class="login-enter">登录</a>
+					<a href="{{url('login/register')}}" data-pb-rseat="15" node-type="loginLi" title="注册" class="reg-enter">注册</a>
 				</div>
 			</div>
 		</div>
@@ -122,30 +122,22 @@ _pre_setPageWidth(_pre_configList);
 
 	<div id="wrapper">
 			<p class="balance">
-			登录账户查看余额！<a href="javascript:void(0);" class="btn btn-sye" click-type="mall_login">立即登录</a>
+			登录账户查看余额！<a href="{{url('login/login')}}" class="btn btn-sye" click-type="mall_login">立即登录</a>
 		</p>
 		<div class="mall-tab">
 		<ul class="tab-tit" data-tb-block="506261_0" data-pb-block="506261">
 			<li class="mall-nobility">
-				<a href="mall.htm" tppabs="http://x.pps.tv/mall" class="mall-tab-item mall-tab-item-sl" data-pb-rseat="1">
+				<a href="{{url('index/mall')}}" tppabs="http://x.pps.tv/mall" class="mall-tab-item mall-tab-item-sl" data-pb-rseat="1">
 					贵 族
 									</a>
 			</li>
-			<li class="mall-guard">
-				<a href="guard.htm" tppabs="http://x.pps.tv/mall/guard" class="mall-tab-item" data-pb-rseat="2">
-					守 护
-									</a>
-			</li>
+
 			<li class="mall-gift">
-				<a href="giftpackage.htm" tppabs="http://x.pps.tv/mall/giftpackage" class="mall-tab-item" data-pb-rseat="3">
+				<a href="{{url('mall/gift')}}" tppabs="http://x.pps.tv/mall/giftpackage" class="mall-tab-item" data-pb-rseat="3">
 					礼 包
 									</a>
 			</li>
-			<li class="li-last mall-car">
-				<a href="car.htm" tppabs="http://x.pps.tv/mall/car" class="tab-titl-end mall-tab-item" data-pb-rseat="4">
-					座 驾
-									</a>
-			</li>
+
 		</ul>
 		<div class="tab-content">
 			<div class="banner">贵族基础特权：贵族通道、排名有限、贵宾席、身份标识、拒绝上麦、无发言限制</div>
