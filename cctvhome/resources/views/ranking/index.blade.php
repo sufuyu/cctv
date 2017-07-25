@@ -6,7 +6,7 @@
 	<meta name="keywords" content="美女直播,视频聊天,视频交友奇秀,秀场,爱奇艺秀场,PPS秀场,美女主播,视频聊天,美女视频,视频直播,美女秀场,真人秀场,在线K歌,视频交友,真人视频">
 	<meta name="description" content="奇秀的人气主播和富豪粉丝的日榜，周榜和月榜。榜单排名依据是主播获得的礼物价值以及粉丝送出礼物的价值。">
 	<link href="{{asset('common/css/blank.css-v=20170713184940.css')}}" tppabs="{{asset('common/css/ppsshow/2.0/style/blank.css?v=20170713184940')}}" type="text/css" rel="stylesheet">
-	<link href="{{asset('common/css/ranks.css-v=20170713184940.css')}}" tppabs="{{asset('common/css/ppsshow/2.0/style/ranks.css?v=20170713184940')}}" type="text/css"
+	<link href="{{asset('common/css/ranks.css-v=20170713184940.css')}}" tppabs="{{asset('common/css/ranks.css?v=20170713184940')}}" type="text/css"
 		  rel="stylesheet">
 </head>
 <body>
@@ -122,15 +122,15 @@ _pre_setPageWidth(_pre_configList);
 	</div>
 	
 	<div id="wrapper">
-		<div class="ranks-nav">
-			<ul class="tab-tit" data-pb-block="15041060">
-				<li><a href="rank.htm" tppabs="http://x.pps.tv/rank" data-pb-rseat="1">风云榜<span class="arrow"></span></a></li>
-				<li class="sep"><a href="week.htm" tppabs="http://x.pps.tv/rank/week" data-pb-rseat="2">周星榜<span class="arrow"></span></a></li>
-				<li class="selected sep"><a href="pk.htm" tppabs="http://x.pps.tv/rank/pk" data-pb-rseat="3">对战榜<span class="arrow"></span></a></li>
-			</ul>
-			<span class="bl"></span>
-			<span class="br"></span>
-		</div>
+	<div class="ranks-nav">
+		<ul class="tab-tit" data-pb-block="15041060">
+			<li><a href="{{url('ranking/rank')}}" tppabs="http://x.pps.tv/rank" data-pb-rseat="1">风云榜<span class="arrow"></span></a></li>
+			<li class="selected sep"><a href="{{url('ranking/week')}}" tppabs="http://x.pps.tv/rank/week" data-pb-rseat="2">周星榜<span class="arrow"></span></a></li>
+			<li class="sep"><a href="{{url('ranking/index')}}" tppabs="http://x.pps.tv/rank/pk" data-pb-rseat="3">对战榜<span class="arrow"></span></a></li>
+		</ul>
+		<span class="bl"></span>
+		<span class="br"></span>
+	</div>
 <!--module/ranks/_ranks.html begin-->
 			<div class="ranks-wrap host-ranks" >
 				<h2 class="page-title">
@@ -141,10 +141,10 @@ _pre_setPageWidth(_pre_configList);
 				</h2>
 
 				<ul class="tab-title">
-					<li class="selected"><a href="javascript:void(0);">日榜<span class="arrow"></span></a></li>
-					<li><a href="javascript:void(0);">周榜<span class="arrow"></span></a></li>
-					<li><a href="javascript:void(0);">月榜<span class="arrow"></span></a></li>
-					<li class="last"><a href="javascript:void(0);">总榜<span class="arrow"></span></a></li>
+					<li class="selected"><a href="{{url('ranking/index')}}">日榜<span class="arrow"></span></a></li>
+					<li><a href="{{url('ranking/index')}}">周榜<span class="arrow"></span></a></li>
+					<li><a href="{{url('ranking/index')}}">月榜<span class="arrow"></span></a></li>
+					<li class="last"><a href="{{url('ranking/index')}}">总榜<span class="arrow"></span></a></li>
 				</ul>
 
 				<div class="tab-content tab-cur">

@@ -97,12 +97,8 @@ class IndexController extends Controller
 
     //点击图片跳转页面
     public function img(){
-        $id= Input::all();//接值
-        //print_r($id);die;
-//        $live_info = DB::table('cctv_user')
-//            ->where()
-//            ->get();
-
+//        $id= Input::all();//接值
+//        echo $id;die;
         return view('index.img');
     }
     //申请入住

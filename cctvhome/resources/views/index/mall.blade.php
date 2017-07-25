@@ -9,6 +9,9 @@
 	<link href="{{asset('common/css/mall.css-v=20170713184940.css')}}" tppabs="{{asset('common/css/mall.css?v=20170713184940')}}" type="text/css" rel="stylesheet">
 </head>
 <body>
+
+
+
 <!--浏览器自适应-->
 <!--页面大小屏触发优化-->
 	<script type="text/javascript">
